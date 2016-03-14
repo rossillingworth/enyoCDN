@@ -84,6 +84,9 @@ run:
 	&& mvn clean compile package appengine:devserver
 
 
+tests:
+	http-server tests/
+
 
 all: clean appEngineInit enyoInit enyoModify enyoPublish ## Download, build install, run
 

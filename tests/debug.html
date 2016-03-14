@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Enyo Bootplate App</title>
+	<!--<link rel="shortcut icon" href="assets/favicon.ico"/>-->
+	<!-- -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf8"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<!-- Less.js (for client-side rendering of less stylesheets; comment to use pre-compiled CSS) -->
+	<script src="/enyo/tools/less.js"></script>
+	<!-- enyo (debug) -->
+	<script src="/enyo/enyo.js" charset="utf-8"></script>
+	<!-- application (debug) -->
+	<script src="/source/package.js" charset="utf-8"></script>
+</head>
+<body class="enyo-unselectable">
+
+<script>
+
+	//############################################
+	//
+	// The original demo Application
+
+	//		enyo.kind({
+	//			name: "myapp.Application",
+	//			kind: "enyo.Application",
+	//			view: "myapp.MainView"
+	//		});
+	//
+	//		enyo.ready(function () {
+	//			new myapp.Application({name: "app"});
+	//		});
+
+	// #####################
+	//
+	// This shows a Control injected directly
+ 	//
+
+	var control = new enyo.Control({
+		name: "helloworld",
+		tag: 'p',
+		content: 'Hello, World!',
+		style: 'color: blue'
+	});
+	control.renderInto(document.body);
+
+	// ################
+
+//	enyo.kind({
+//		name: "Hello",
+//		kind: enyo.Control,
+//		components: [
+//			{name: "hello", content: "Hello From Enyo", ontap: "helloTap"},
+//			{tag: "hr"}
+//		],
+//		helloTap: function() {
+//			this.$.hello.addStyles("color: red");
+//		}
+//	});
+//
+//	// render two, they're small
+//	new Hello().renderInto(document.getElementById("a"));
+//	new Hello().renderInto(document.getElementById("b"));
+
+// ########################
+
+//	var list = new enyo.Control({
+//		tag: "div",
+//		components: [
+//			{ tag: "p", content: "The Additive Primary Colors" },
+//			{ tag: "ul", components: [
+//				{ tag: "li", name: "red", content: "red" },
+//				{ tag: "li", name: "green", content: "green" },
+//				{ tag: "li", name: "blue", content: "blue" } ] } ]
+//	});
+//	list.renderInto(document.body);
+
+</script>
+
+</body>
+</html>
